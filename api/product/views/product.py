@@ -11,7 +11,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     permission_classes = (AllowAny, )
 
     def get_queryset(self):
-        params = self.request.params
+        params = self.request.query_params
 
         search = params.get('search')
         manufacturer_id = params.get('manufacturer_id')
